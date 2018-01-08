@@ -5,6 +5,9 @@
   "scripts": {
     "test": "karma start ClientApp/test/karma.conf.js"
   },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "devDependencies": {
     "@angular/animations": "4.2.5",
     "@angular/common": "4.2.5",
