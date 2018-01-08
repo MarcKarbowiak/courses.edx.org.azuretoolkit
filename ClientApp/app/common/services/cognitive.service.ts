@@ -1,0 +1,1 @@
+import { ComputerVisionRequest, ComputerVisionResponse } from '../models/computerVisionResponse';
