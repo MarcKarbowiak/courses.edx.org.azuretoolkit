@@ -9,6 +9,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { SharedModule } from './common/shared.module';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
             { path: 'search', component: SearchComponent },
             { path: 'gallery', component: GalleryComponent },
             { path: '**', redirectTo: 'home' }
-        ])
+        ]),
+        SharedModule
     ]
 })
 export class AppModuleShared {
