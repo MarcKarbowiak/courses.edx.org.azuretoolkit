@@ -27,20 +27,22 @@
             <div>
                 <b>Number of people: {{currentAnalytics?.faces.length}}</b>
                 <hr/>
-                <b>Number of Women: {{(currentAnalytics?.faces | facegenderfilter: {age: 0, gender: 'Female'}).length}}</b>
-                <div *ngFor="let woman of currentAnalytics?.faces | facegenderfilter: {age: 0, gender: 'Female'}">
-                    age: {{woman.age}}
+                <div ng-show="currentAnalytics?.faces.length > 0">
+                    <b>Number of Women: {{(currentAnalytics?.faces | facegenderfilter: {age: 0, gender: 'Female'}).length}}</b>
+                    <div *ngFor="let woman of currentAnalytics?.faces | facegenderfilter: {age: 0, gender: 'Female'}">
+                        age: {{woman.age}}
+                    </div>
+                    <hr/>
+                    <b>Number of Men: {{(currentAnalytics?.faces | facegenderfilter: {age: 0, gender: 'Male'}).length}}</b>
+                    <div *ngFor="let man of currentAnalytics.faces | facegenderfilter: {age: 0, gender: 'Male'}">
+                        age: {{man.age}}
+                    </div>
+                    <hr/>
                 </div>
-                <hr/>
-                <b>Number of Men: {{(currentAnalytics?.faces | facegenderfilter: {age: 0, gender: 'Male'}).length}}</b>
-                <div *ngFor="let man of currentAnalytics.faces | facegenderfilter: {age: 0, gender: 'Male'}">
-                    age: {{man.age}}
-                </div>
-                <hr/>
             </div>
             <div>
                 <span class="face label" [ngClass]="{'label-default': face.gender == 'Male', 'label-danger': face.gender != 'Male'}" 
-                *ngFor="let face of currentAnalytics?.faces">Age: {{face.age}} Gender: {{face.gender}}
+                    *ngFor="let face of currentAnalytics?.faces">Age: {{face.age}} Gender: {{face.gender}}
                 </span>
             </div>
         </div>
