@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { SharedModule } from './common/shared.module';
+import {FaceGenderFilterPipe} from './common/models/face-gender-filter'
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { SharedModule } from './common/shared.module';
         NavMenuComponent,
         HomeComponent,
         SearchComponent,
-        GalleryComponent
+        GalleryComponent,
+        FaceGenderFilterPipe
     ],
     imports: [
         CommonModule,

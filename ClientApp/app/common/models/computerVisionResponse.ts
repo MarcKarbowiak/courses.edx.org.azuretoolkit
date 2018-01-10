@@ -1,6 +1,10 @@
 export interface ComputerVisionRequest {
     url: string;
 }
+export interface Face{
+    age: number;
+    gender: string;
+}
 export interface ComputerVisionResponse {
     description: {
         captions: Array<{
@@ -12,4 +16,5 @@ export interface ComputerVisionResponse {
         confidence: number;
         name: string;
     }>;
+    faces: Face[];
 }
